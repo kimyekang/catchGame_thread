@@ -1,0 +1,2 @@
+rootProject.name = "catchGame_thread"
+include ':app'
