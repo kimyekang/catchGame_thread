@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".GameActivity">
+
+
 
     <TextView
         android:id="@+id/score_tv"
@@ -65,12 +67,39 @@
         app:layout_constraintTop_toBottomOf="@+id/score_tv" />
 
     <ImageView
-        android:layout_width="120dp"
-        android:layout_height="150dp"
+        android:id="@+id/player"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
         android:src="@drawable/catwithbasket"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/score_apple"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/apple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/score_apple2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/apple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/score_electronic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/electronic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
