@@ -27,7 +27,7 @@ class StartActivity : AppCompatActivity() {
             tv!!.text = highScore.toString()
             highScore = score
         }
-
+//
 
     }
 
@@ -38,14 +38,7 @@ class StartActivity : AppCompatActivity() {
         val savedString = sharedPreferences?.getString("GAME_SCORE", null)
 
         highScore = savedString!!.toInt()
-
         var tv = findViewById<TextView>(R.id.bestScore_tv)
         tv!!.text = savedString
-
-
-
     }
-
-
-
 }
