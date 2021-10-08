@@ -1,44 +1,41 @@
 package com.pioneerapp.catchgame_thread
 
-import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.*
 import android.widget.TextView
-import org.w3c.dom.Text
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class StartActivity : AppCompatActivity() {
-
-    var highScore = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
-
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
         findViewById<TextView>(R.id.start_button).setOnClickListener{
             val intent = Intent(this, GameActivity::class.java)
+            intent.putExtra("IMAGE", "0")
             startActivity(intent)
         }
-        loadData()
-
-        var score = intent.getIntExtra("SCORE", 0)
-
-        if(highScore < score) {
-            var tv = findViewById<TextView>(R.id.bestScore_tv)
-            tv!!.text = highScore.toString()
-            highScore = score
-        }
-//
 
     }
+    // GestureDetecctor to detect long press
+    private val gestureDetector = GestureDetector(object : GestureDetector.SimpleOnGestureListener() {
+        override fun onLongPress(e: MotionEvent) {
+            val intent = Intent(this@StartActivity, SecretActivity::class.java)
+            startActivity(intent)
+            // Toast to notify the Long Press
+            Toast.makeText(applicationContext, "사진 눌러바!", Toast.LENGTH_SHORT).show()
+        }
+    })
 
+    // onTouchEvent to confirm presence of Touch due to Long Press
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
 
-
-    private fun loadData() {
-        val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        val savedString = sharedPreferences?.getString("GAME_SCORE", null)
-
-        highScore = savedString!!.toInt()
-        var tv = findViewById<TextView>(R.id.bestScore_tv)
-        tv!!.text = savedString
+        return gestureDetector.onTouchEvent(event)
     }
 }

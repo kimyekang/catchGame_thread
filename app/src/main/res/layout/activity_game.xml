@@ -75,6 +75,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/player2"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:src="@drawable/image2"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <ImageView
         android:id="@+id/score_apple"
@@ -94,6 +103,30 @@
 
     <ImageView
         android:id="@+id/score_electronic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/electronic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/score_electronic2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/electronic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/score_electronic3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/electronic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/score_electronic4"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/electronic"
