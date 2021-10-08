@@ -138,7 +138,7 @@ class GameActivity : AppCompatActivity() {
         binding.scoreApple2.x = apple2X.toFloat()
 
         //electronic
-        electroY += 12
+        electroY += 28
         if(electroY > height) {
             electroY = 0 - binding.scoreElectronic.height
             electroX =  random.random()
@@ -146,7 +146,7 @@ class GameActivity : AppCompatActivity() {
         binding.scoreElectronic.y = electroY.toFloat()
         binding.scoreElectronic.x = electroX.toFloat()
         //electronic2
-        electro2Y += 20
+        electro2Y += 24
         if(electro2Y > height) {
             electro2Y = 0 - binding.scoreElectronic2.height
             electro2X =  random.random()
@@ -154,7 +154,7 @@ class GameActivity : AppCompatActivity() {
         binding.scoreElectronic2.y = electro2Y.toFloat()
         binding.scoreElectronic2.x = electro2X.toFloat()
         //electronic3
-        electro3Y += 20
+        electro3Y += 32
         if(electro3Y > height) {
             electro3Y = 0 - binding.scoreElectronic3.height
             electro3X =  random.random()
@@ -162,7 +162,7 @@ class GameActivity : AppCompatActivity() {
         binding.scoreElectronic3.y = electro3Y.toFloat()
         binding.scoreElectronic3.x = electro3X.toFloat()
         //electronic4
-        electro4Y += 16
+        electro4Y += 36
         if(electro4Y > height) {
             electro4Y = 0 - binding.scoreElectronic4.height
             electro4X =  random.random()

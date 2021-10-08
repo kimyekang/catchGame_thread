@@ -3,6 +3,7 @@ package com.pioneerapp.catchgame_thread
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,10 @@ class StartActivity : AppCompatActivity() {
             val intent = Intent(this, GameActivity::class.java)
             intent.putExtra("IMAGE", "0")
             startActivity(intent)
+        }
+        findViewById<Button>(R.id.back_btn).setOnClickListener {
+            finish()
+            System.exit(0)
         }
 
     }
